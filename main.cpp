@@ -1,14 +1,19 @@
 #include <iostream>
 using namespace std;
+#include "raylib/src/raylib.h"
 int main()
 {
-    cout << "7 + 3 = " << 7 + 3 << endl;
-    cout << "7 - 3 = " << 7 - 3 << endl;
-    cout << "7 * 3 = " << 7 * 3 << endl;
-    cout << "7 / 3 = " << 7 / 3 << endl;
-    cout << "7.0 / 3.0 = " << 7 / 3.0 << endl;
-    cout << "7 % 3 = " << 7 % 3 << endl;
-    cout << "7 + 3 * 5 = " << 7 + 3 * 5 << endl;
-    cout << "(7 + 3) * 5 = " << (7 + 3) * 5 << endl;
+    InitWindow(800, 450, "raylib [core] example - basic window");
+
+    while (!WindowShouldClose())
+    {
+        BeginDrawing();
+        ClearBackground(RAYWHITE);
+        DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
+        EndDrawing();
+    }
+
+    CloseWindow();
+
     return 0;
 }
